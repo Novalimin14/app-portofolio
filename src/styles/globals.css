@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  body {
+    background-color: #1f1f1f;
+    color: #b3b3b3;
+    font-family: 'Arial', sans-serif;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
+  }
+}
+
+
+
+
+/* Tailwind scrollbar utility */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #22c55e; /* Warna hijau */
+    border-radius: 8px; /* Membuat sudut scrollbar membulat */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #16a34a; /* Warna hijau gelap saat hover */
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Warna track (latar belakang scrollbar) */
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +55,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
